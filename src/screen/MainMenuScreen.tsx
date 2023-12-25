@@ -22,7 +22,6 @@ const MainMenuScreen: React.FC = (props) => {
     const handleLogoutOnPress = () => {
         navigation.goBack();
     }
-
     return (
         <ScreenWithLinearBackground styleProps={{backgroundColor: "gray", alignItems: "center"}} colors={COLORS.GreenGradient}>
             <TouchableOpacity
@@ -30,10 +29,9 @@ const MainMenuScreen: React.FC = (props) => {
                 style={{backgroundColor: "pink", padding: 8}}>
                 <Text>Çıkış yap</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                style={{position: "absolute", borderRadius: 99, width: 60, aspectRatio: 1, right: 5, top: 100, backgroundColor: "red", justifyContent: "center", alignItems: "center"}}>
-                <Text>friends</Text>
-            </TouchableOpacity>
+            <Text >
+                Kişilere Göre Toplam Borçlar
+            </Text>
 
             <TouchableOpacity
                 style={{borderRadius: 99, width: 160, aspectRatio: 1, marginTop: 300, backgroundColor: "cyan", justifyContent: "center", alignItems: "center"}}
