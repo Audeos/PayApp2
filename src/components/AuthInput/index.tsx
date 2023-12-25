@@ -6,7 +6,7 @@ import {getOnlyNumbers, getOnlyWords} from "../../utils/textFormatter";
 type InputProps = TextInputProps & {
     type: "phone" | "name" | "password",
 }
-const LoginInput: React.FC<InputProps> = (props) => {
+const AuthInput: React.FC<InputProps> = (props) => {
     const {type, ...rest} = props;
 
     const onChangeText = useCallback((text: string) => {
@@ -50,4 +50,4 @@ const LoginInput: React.FC<InputProps> = (props) => {
     )
 }
 
-export default React.memo(LoginInput)
+export default React.memo(AuthInput)

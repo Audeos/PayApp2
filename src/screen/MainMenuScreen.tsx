@@ -3,18 +3,19 @@ import {Text, TouchableOpacity, useWindowDimensions, View} from "react-native";
 import Screen from "../components/Screen";
 import {useNavigation} from "@react-navigation/native";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
+import {MainMenuNavigationProp} from "./Navigation.tsx";
+import ScreenWithLinearBackground from "../components/ScreenWithLinearBackground.tsx";
+import {COLORS} from "../utils/colors.ts";
 
 const MainMenuScreen: React.FC = (props) => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<MainMenuNavigationProp>();
 
     const handleRoomsOnPress = () => {
-        // @ts-ignore
-        navigation.navigate("RoomListScreen");
+        navigation.navigate("GroupsScreen");
     }
 
     const handleProfileOnPress = () => {
-        // @ts-ignore
         navigation.navigate("ProfileScreen");
     }
 
@@ -22,9 +23,8 @@ const MainMenuScreen: React.FC = (props) => {
         navigation.goBack();
     }
 
-
     return (
-        <Screen styleProps={{backgroundColor: "gray", alignItems: "center"}}>
+        <ScreenWithLinearBackground styleProps={{backgroundColor: "gray", alignItems: "center"}} colors={COLORS.GreenGradient}>
             <TouchableOpacity
                 onPress={handleLogoutOnPress}
                 style={{backgroundColor: "pink", padding: 8}}>
@@ -48,7 +48,7 @@ const MainMenuScreen: React.FC = (props) => {
                 <Text>Profil</Text>
             </TouchableOpacity>
 
-        </Screen>
+        </ScreenWithLinearBackground>
     )
 }
 

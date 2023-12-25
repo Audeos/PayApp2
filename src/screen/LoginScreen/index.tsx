@@ -1,15 +1,14 @@
 import React, {createRef, useCallback, useEffect, useRef, useState} from "react";
 import {Alert, Animated, Easing, Keyboard, Modal, NativeSyntheticEvent, SafeAreaView, ScrollView, Text, TextInput, TextInputChangeEventData, TouchableOpacity, TouchableWithoutFeedback, View} from "react-native";
 import {useNavigation} from '@react-navigation/native';
-import LoginInput from "../../components/LoginInput";
 import ScreenWithLinearBackground from "../../components/ScreenWithLinearBackground";
-import WideModernButton from "../../components/WideModernButton";
 import SignupForm from "./SignupForm.tsx";
 import {screenHeight, screenWidth} from "../../utils/dimensions.ts";
 import {styles} from "./style.ts";
 import LoginForm from "./LoginForm.tsx";
 import {useAppDispatch, useAppSelector} from "../../store";
 import authSlice, {changeFullNameAction, changePasswordAction, changePhoneNumberAction, changePurposeAction} from "../../store/authSlice.ts";
+import {COLORS} from "../../utils/colors.ts";
 
 
 type LoginInputFields = {
@@ -53,7 +52,7 @@ const LoginScreen: React.FC = (props) => {
 
     return (
         <ScreenWithLinearBackground
-            colors={["#2E9633", "rgba(159,234,141,0.86)", "#B8F5A3"]}>
+            colors={COLORS.GreenGradient}>
             <ScrollView
                 style={{flex: 1}}
                 contentContainerStyle={{flexGrow: 1}}>

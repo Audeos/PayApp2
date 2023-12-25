@@ -5,7 +5,7 @@ import data from "../MOCK_DATA.json";
 import RoomAsListItem from "../components/RoomAsListItem";
 import BackButton from "../components/BackButton";
 
-const RoomListScreen: React.FC = (props) => {
+const GroupsScreen: React.FC = (props) => {
 
     return (
         <Screen styleProps={{backgroundColor: "gray", paddingHorizontal: 24}}>
@@ -43,4 +43,4 @@ const RoomListScreen: React.FC = (props) => {
     )
 }
 
-export default RoomListScreen
+export default GroupsScreen
