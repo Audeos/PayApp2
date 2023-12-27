@@ -17,6 +17,12 @@ const fonts = {
         fontFamily: 'RobotoCondensed-Light',
         fontWeight:"300",
     },
+    RobotoCondensedBold: {
+        fontFamily: 'RobotoCondensed-Bold',
+    },
+    RobotoCondensedBoldItalic: {
+        fontFamily: 'RobotoCondensed-BoldItalic',
+    },
 };
 
 type FontKeys = keyof typeof fonts;

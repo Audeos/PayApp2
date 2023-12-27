@@ -1,7 +1,5 @@
 import Navigation from "./src/screen/Navigation";
 import React, {useCallback, useEffect} from "react";
-import {SafeAreaProvider, useSafeAreaInsets} from "react-native-safe-area-context";
-import KeyboardClosingWrapper from "./src/components/KeyboardClosingWrapper.tsx";
 import {Keyboard, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, View} from "react-native";
 import {Provider} from "react-redux";
 import store from "./src/store";

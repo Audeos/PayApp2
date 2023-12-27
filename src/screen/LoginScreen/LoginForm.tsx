@@ -23,13 +23,13 @@ const LoginForm: React.FC<FormProps> = (props) => {
     const navigation = useNavigation<LoginNavigationProp>();
 
     const handleLoginPress = useCallback(() => {
-        navigation.navigate("MainMenuScreen")
+        navigation.navigate("TabNavigation")
         // if (!loginInputs.phoneNumber || !loginInputs.password) {
         //     Alert.alert("Kullanıcı adı veya şifre boş")
         // } else {
         //     //todo props
         //     // @ts-ignore
-        //     navigation.navigate("MainMenuScreen")
+        //     navigation.navigate("DashboardScreen")
         // }
     }, [navigation]);
 
