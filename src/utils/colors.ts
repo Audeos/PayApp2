@@ -4,5 +4,7 @@ export const COLORS = {
     LightGreen2: "#5FB363",
     DarkGreen: "#3C8900",
     DarkGreen2: "#00803B",
+    DarkGreen3:"#4C7A50",
+    DarkGreen4: "#006C17",
     StrokeGreen:"#10C823",
 }

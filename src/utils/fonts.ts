@@ -17,6 +17,12 @@ const fonts = {
         fontFamily: 'RobotoCondensed-Light',
         fontWeight:"300",
     },
+    RobotoCondensedExtraLightItalic:{
+        fontFamily: "RobotoCondensed-ExtraLightItalic"
+    },
+    RobotoCondensedExtraLight:{
+        fontFamily: "RobotoCondensed-ExtraLight"
+    },
     RobotoCondensedBold: {
         fontFamily: 'RobotoCondensed-Bold',
     },

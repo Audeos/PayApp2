@@ -53,7 +53,7 @@ const TabNavigation = () => (
         <Tabs.Screen name={"DashboardScreen"} component={DashboardScreen}
                      options={{tabBarLabel: "Özet", tabBarIcon: ({focused = false}) => <DashboardIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"GroupsScreen"} component={GroupsScreen}
-                     options={{tabBarLabel: "Arkadaşlar", tabBarIcon: ({focused = false}) => <FriendsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
+                     options={{tabBarLabel: "Kişiler", tabBarIcon: ({focused = false}) => <FriendsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"FriendsScreen"} component={FriendsScreen}
                      options={{tabBarLabel: "Gruplar", tabBarIcon: ({focused = false}) => <GroupsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"ProfileScreen"} component={ProfileScreen}

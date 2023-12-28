@@ -6289,6 +6289,11 @@ react-native-animated-nav-tab-bar@^3.1.10:
   resolved "https://registry.yarnpkg.com/react-native-animated-nav-tab-bar/-/react-native-animated-nav-tab-bar-3.1.10.tgz#23ed24f4102ce02c8849f4e8aaf241b5e19506cc"
   integrity sha512-GINXgLsesHLScHVWios4bVX2UU/98ELRzhWwA6hG9BU+LfDPGWAKUwfTja9Yh9NgTy3Jz/tkth8NM632BhJyHw==
 
+react-native-image-picker@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-7.1.0.tgz#1a41cc45ccdc177c2ebf7c7accee0ceadc36abd8"
+  integrity sha512-An0hn2mwqjGAA2mbsXdHRTyoMMklGPT9stIjE2zvkegU7CdoFhowqvVHfnELJNZnfAiSQuIaeY//z0r1R0lsgw==
+
 react-native-linear-gradient@^2.8.3:
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.8.3.tgz#9a116649f86d74747304ee13db325e20b21e564f"

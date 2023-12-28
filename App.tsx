@@ -1,4 +1,4 @@
-import Navigation from "./src/screen/Navigation";
+import Navigation from "./src/screens/Navigation";
 import React, {useCallback, useEffect} from "react";
 import {Keyboard, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, View} from "react-native";
 import {Provider} from "react-redux";
