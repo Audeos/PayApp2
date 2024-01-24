@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "fullName": "Shirlee Plews",
+    "imageURL": "http://dummyimage.com/38x38.png/dddddd/000000",
+    "phoneNumber": "908 558 9571",
+    "card": "IL42 2017 8095 6363 7759 826",
+    "debt": 32.3
+  },
+  {
+    "id": 2,
+    "fullName": "Donnajean Buse",
+    "imageURL": "http://dummyimage.com/38x38.png/5fa2dd/ffffff",
+    "phoneNumber": "661 362 3917",
+    "card": "ES38 7075 7266 0164 0109 9562",
+    "debt": -40.2
+  },
+  {
+    "id": 3,
+    "fullName": "Anna-diana Pauncefort",
+    "imageURL": "http://dummyimage.com/38x38.png/ff4444/ffffff",
+    "phoneNumber": "824 399 3887",
+    "card": "PT95 1061 7019 8839 6309 7116 7",
+    "debt": -42.9
+  },
+  {
+    "id": 4,
+    "fullName": "Claire Ivashnikov",
+    "imageURL": "http://dummyimage.com/38x38.png/dddddd/000000",
+    "phoneNumber": "576 180 1939",
+    "card": "AT90 8376 6903 1630 7907",
+    "debt": 31.6
+  },
+  {
+    "id": 5,
+    "fullName": "Henrietta Amori",
+    "imageURL": "http://dummyimage.com/38x38.png/dddddd/000000",
+    "phoneNumber": "395 398 5690",
+    "card": "FR65 1909 8878 04L8 BXKB JTMW H33",
+    "debt": -47.4
+  },
+  {
+    "id": 6,
+    "fullName": "Micky Emmerson",
+    "imageURL": "http://dummyimage.com/38x38.png/cc0000/ffffff",
+    "phoneNumber": "930 773 4972",
+    "card": "FI84 2157 0213 7352 23",
+    "debt": 40.5
+  }
+]

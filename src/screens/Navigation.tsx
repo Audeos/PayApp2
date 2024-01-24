@@ -1,18 +1,16 @@
 import React from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator, NativeStackNavigationProp} from '@react-navigation/native-stack';
-import DashboardScreen from "./DashboardScreen.tsx";
-import GroupsScreen from "./GroupsScreen.tsx";
+import DashboardScreen from "./DashboardScreen";
+import GroupsScreen from "./GroupsScreen";
 import ProfileScreen from "./ProfileScreen";
 import LoginScreen from "./LoginScreen";
 import {AnimatedTabBarNavigator} from "react-native-animated-nav-tab-bar";
 import {COLORS} from "../utils/colors.ts";
-import {HomeIcon} from "../assets/icons/tabbar/colorizer.tsx";
 import DashboardIcon from "../assets/icons/tabbar/dashboard.svg";
 import GroupsIcon from "../assets/icons/tabbar/groups.svg";
 import FriendsIcon from "../assets/icons/tabbar/friends.svg";
 import ProfileIcon from "../assets/icons/tabbar/profile.svg";
-import {Colors} from "react-native/Libraries/NewAppScreen";
 import FriendsScreen from "./FriendsScreen.tsx";
 import {Fonts} from "../utils/fonts.ts";
 
@@ -52,9 +50,9 @@ const TabNavigation = () => (
         appearance={{floating: true, horizontalPadding: 14, tabBarBackground: COLORS.DarkGreen2, activeTabBackgrounds: "white"}}>
         <Tabs.Screen name={"DashboardScreen"} component={DashboardScreen}
                      options={{tabBarLabel: "Özet", tabBarIcon: ({focused = false}) => <DashboardIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
-        <Tabs.Screen name={"GroupsScreen"} component={GroupsScreen}
-                     options={{tabBarLabel: "Kişiler", tabBarIcon: ({focused = false}) => <FriendsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"FriendsScreen"} component={FriendsScreen}
+                     options={{tabBarLabel: "Kişiler", tabBarIcon: ({focused = false}) => <FriendsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
+        <Tabs.Screen name={"GroupsScreen"} component={GroupsScreen}
                      options={{tabBarLabel: "Gruplar", tabBarIcon: ({focused = false}) => <GroupsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"ProfileScreen"} component={ProfileScreen}
                      options={{tabBarLabel: "Profil", tabBarIcon: ({focused = false}) => <ProfileIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>

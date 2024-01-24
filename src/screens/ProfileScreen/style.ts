@@ -28,34 +28,27 @@ export const styles = StyleSheet.create({
         fontSize: 20, ...Fonts.RobotoCondensedExtraLightItalic,
         lineHeight: 24
     },
-    cardContainer: {
-        width: "100%",
-        height: 86
+    addCardButton:{
+        paddingHorizontal:10,
+        borderRadius:12,
+        backgroundColor:COLORS.FillSoftGreen,
+        borderColor:COLORS.BorderSoftGreen,
+        borderWidth:1,
+        flexDirection:"row",
+        gap:3,
     },
-    cardContainerHeader: {
-        width: "100%",
-        height: 24,
-        flexDirection: "row",
-        justifyContent: "space-between"
+    addCardText:{
+        fontSize:18,
+        color:"#056604",
+        ...Fonts.RobotoCondensedLightItalic
     },
-    bankNameText: {
-        fontSize: 18,
-        ...Fonts.RobotoCondensedExtraLightItalic
+    addCardPlus:{
+        fontSize:24,
+        lineHeight:24,
+        color:"#056604",
+        ...Fonts.RobotoCondensedLight
     },
-    cardContainerBody: {
-        width: "100%",
-        height: 54,
-        backgroundColor: "rgba(211,211,211,0.2)",
-        borderRadius: 12,
-        flexDirection: "row",
-        alignItems: "center",
-        paddingLeft: 5,
-        gap: 5
-    },
-    IbanText: {
-        fontSize: 26,
-        ...Fonts.RobotoCondensedRegularItalic,
-    },
+
 
 
 

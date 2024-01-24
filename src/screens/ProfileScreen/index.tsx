@@ -5,6 +5,7 @@ import BackButton from "../../components/BackButton";
 import {styles} from "./style.ts";
 import {CopyIcon} from "../../assets/icons/Icons.tsx";
 import DummyBank from "../../assets/dummy/dummyBank.svg"
+import DummyBank2 from "../../assets/dummy/dummybank2.svg"
 import Camera from "../../assets/icons/svgs/camera.svg"
 import {launchImageLibrary} from "react-native-image-picker";
 import LogoutIcon from "../../assets/icons/svgs/logout.svg"
@@ -12,9 +13,13 @@ import PasswordIcon from "../../assets/icons/svgs/password.svg"
 import PhoneIcon from "../../assets/icons/svgs/phone.svg"
 import NameIcon from "../../assets/icons/svgs/nameCard.svg"
 import ProfileSettingsButton from "../../components/ProfileSettingsButton";
+import Clipboard from "@react-native-clipboard/clipboard";
+import ProfileCard from "../../components/ProfileCard";
+import PreferredCard from "../../components/ProfileCard/PreferredCard.tsx";
+import PlusIcon from "../../assets/icons/svgs/plus.svg"
 
 const ProfileScreen: React.FC = (props) => {
-    const [image, setImage] = useState(null)
+    const [image, setImage] = useState(null);
 
     const pickImageOnPress = useCallback(async () => {
         const response = await launchImageLibrary({mediaType: "photo", quality: 0.3})
@@ -27,6 +32,10 @@ const ProfileScreen: React.FC = (props) => {
         }
 
     }, []);
+
+    const copyToClipboard = () => {
+        Clipboard.setString('hello world');
+    };
 
     return (
         <Screen>
@@ -51,20 +60,13 @@ const ProfileScreen: React.FC = (props) => {
                         <Text style={styles.friendIdText}>ID: 260201025</Text>
                     </View>
                 </View>
-                <Text style={{marginTop: 20, fontSize: 20, fontWeight: "600"}}>TR40 6000 3000 2000 1000</Text>
-                <Text style={{marginTop: 20, fontSize: 20, fontWeight: "600"}}>TR70 9000 6000 5000 4000</Text>
-                <Text style={{marginTop: 20, fontSize: 20}}>+90 537 309 02 20</Text>
-                <View style={styles.cardContainer}>
-                    <View style={styles.cardContainerHeader}>
-                        <DummyBank height={24}/>
-                        <Text style={styles.bankNameText}>Finansbank</Text>
-                    </View>
-                    <View style={styles.cardContainerBody}>
-                        <CopyIcon strokeWidth={1.5}/>
-                        <Text style={styles.IbanText}>TR91 7000 0001 4050 2034</Text>
-                    </View>
-                </View>
-
+                <PreferredCard Icon={DummyBank} bankName={"Finansbank"} iban={"TR91700000014050203454"}/>
+                <ProfileCard Icon={DummyBank} bankName={"Finansbank"} iban={"TR91700000014050203454"}/>
+                <ProfileCard Icon={DummyBank2} bankName={"AKBANK"} iban={"TR91700000014050203454"}/>
+                <TouchableOpacity style={styles.addCardButton}>
+                    <PlusIcon/>
+                    <Text style={styles.addCardText}>Kart Ekle</Text>
+                </TouchableOpacity>
                 <ProfileSettingsButton Icon={PasswordIcon} text={"Şifremi Değiştir"}/>
                 <ProfileSettingsButton Icon={PhoneIcon} text={"Telefon Numaramı Değiştir"}/>
                 <ProfileSettingsButton Icon={NameIcon} text={"Tam İsmimi Değiştir"}/>

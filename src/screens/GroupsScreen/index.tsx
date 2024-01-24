@@ -1,35 +1,34 @@
 import React from "react";
-import Screen from "../components/Screen";
+import Screen from "../../components/Screen.tsx";
 import {FlatList, Text, TouchableOpacity, View} from "react-native";
-import data from "../MOCK_DATA.json";
-import RoomAsListItem from "../components/RoomAsListItem";
-import BackButton from "../components/BackButton";
+import data from "../../MOCK_DATA.json";
+import RoomAsListItem from "../../components/RoomAsListItem";
+import {styles} from "./style.ts";
+import {COLORS} from "../../utils/colors.ts";
+import ImageIcon from "../../assets/icons/svgs/image.svg"
 
 const GroupsScreen: React.FC = (props) => {
 
     return (
-        <Screen styleProps={{backgroundColor: "gray", paddingHorizontal: 24}}>
-            <BackButton/>
+        <Screen styleProps={{backgroundColor: COLORS.WhiteBackground, paddingHorizontal: 24}}>
             <View style={{flexDirection: "row", marginTop: 60, width: "100%", height: 40, gap: 20, justifyContent: "space-evenly"}}>
-                <TouchableOpacity style={{flex: 1, backgroundColor: "red", justifyContent: "center", alignItems: "center"}}>
-                    <Text>Yeni oda kur</Text>
+                <TouchableOpacity style={[styles.whiteButton, styles.twinButtonContainer]}>
+                    <Text style={[styles.twinButtonText, {color: "#096B00"}]}>Grup Oluştur</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{flex: 1, backgroundColor: "red", justifyContent: "center", alignItems: "center"}}>
-                    <Text>Odaya katıl</Text>
+                <TouchableOpacity style={[styles.greenButton, styles.twinButtonContainer]}>
+                    <Text style={[styles.twinButtonText, {color: COLORS.White2}]}>Gruba katıl</Text>
                 </TouchableOpacity>
             </View>
-            <View style={{flexDirection: "row"}}>
-                <View style={{width: 30, height: 64, marginRight: 20, justifyContent: "center", alignItems: "center"}}>
-                    <Text style={{fontSize: 20}}>No</Text>
-                </View>
+            <View style={{flexDirection: "row", height: 65, borderTopRightRadius: 12, borderTopLeftRadius: 12, backgroundColor: COLORS.DarkGreen5, alignItems: "center",paddingLeft:12}}>
+                <ImageIcon/>
                 <View style={{width: 64, height: 64, marginRight: 20, justifyContent: "center", alignItems: "center"}}>
-                    <Text style={{fontSize: 20}}>asd</Text>
+                    <Text style={{fontSize: 20}}>Grup İsmi</Text>
                 </View>
                 <View style={{width: 120, height: 64, marginRight: 20, justifyContent: "center", alignItems: "flex-start"}}>
-                    <Text style={{fontSize: 20}}>Oda ismi</Text>
+                    <Text style={{fontSize: 20}}>Kişiler</Text>
                 </View>
                 <View style={{width: 50, height: 64, marginRight: 20, justifyContent: "center", alignItems: "center"}}>
-                    <Text style={{fontSize: 20}}>Kişi</Text>
+                    <Text style={{fontSize: 20}}>#</Text>
                 </View>
             </View>
             <FlatList
@@ -38,7 +37,6 @@ const GroupsScreen: React.FC = (props) => {
                 renderItem={({item, index}) => <RoomAsListItem {...item} roomNumber={index + 1}/>}
                 ItemSeparatorComponent={() => <View style={{height: 8, backgroundColor: "#6e6e6e"}}/>}
             />
-
         </Screen>
     )
 }
