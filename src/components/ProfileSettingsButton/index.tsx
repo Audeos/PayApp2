@@ -1,29 +1,26 @@
 import React, {ReactNode, useCallback} from "react";
-import {Text, TouchableOpacity} from "react-native";
+import {Text, TouchableOpacity, TouchableOpacityProps} from "react-native";
 import LogoutIcon from "../../assets/icons/svgs/logout.svg";
 import {styles} from "./style.ts";
+import {GestureResponderEvent} from "react-native/Libraries/Types/CoreEventTypes";
 
 type SettingsButtonProps = {
-    onPress?: ()=>void,
-    text:string,
-    Icon: React.ElementType
-}
+    text: string,
+    Icon: React.ElementType,
+    onPress?: () => void,
+} & TouchableOpacityProps
 const ProfileSettingsButton: React.FC<SettingsButtonProps> = (props) => {
+    const {text, Icon, ...rest} = props;
 
-    const onPress = useCallback(() => {
-
-        props.onPress &&
-        props.onPress();
-    }, [props.onPress]);
-
-return (
-    <TouchableOpacity
-        onPress={onPress}
-        style={styles.settingsButtonContainer}>
-        {props.Icon && <props.Icon/>}
-        <Text style={styles.settingsButtonText}>{props.text}</Text>
-    </TouchableOpacity>
-)
+    return (
+        <TouchableOpacity
+            style={styles.settingsButtonContainer}
+            {...rest}
+        >
+            {Icon && <props.Icon/>}
+            <Text style={styles.settingsButtonText}>{text}</Text>
+        </TouchableOpacity>
+    )
 }
 
 export default ProfileSettingsButton

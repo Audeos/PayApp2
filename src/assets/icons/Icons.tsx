@@ -19,4 +19,11 @@ return (
 )
 }
 
+export const ArrowIcon: React.FC<IconProps> = (props) => {
+    return (
+        <Svg width={props.width || 24} height={props.height || 24} viewBox="0 0 32 10" fill="none">
+            <Path d="M30.6665 5L1.33317 5M1.33317 5L8.6665 9M1.33317 5L8.6665 1" stroke={props.strokeColor || "white"} strokeWidth={props.strokeWidth || 2} strokeLinecap="round" strokeLinejoin="round"/>
+        </Svg>
 
+    )
+}

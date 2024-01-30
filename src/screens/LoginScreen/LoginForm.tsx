@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import {styles} from "./style.ts";
 import {Alert, Text, View} from "react-native";
 import AuthInput from "../../components/AuthInput";
-import WideModernButton from "../../components/WideModernButton";
+import WideModernButton from "../../components/AuthButton";
 import {useAppDispatch, useAppSelector} from "../../store";
 import {useNavigation} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";

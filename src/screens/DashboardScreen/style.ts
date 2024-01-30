@@ -39,22 +39,22 @@ export const styles = StyleSheet.create({
     groupContainer: {
         height: 54,
         backgroundColor: COLORS.LightGreen3,
-        paddingHorizontal:12
+        paddingHorizontal: 12
     },
     groupNameText: {
         fontSize: 20,
         ...Fonts.RobotoCondensedLightItalic,
-        marginLeft:15
+        marginLeft: 15
     },
     groupCountText: {
         fontSize: 16,
         ...Fonts.RobotoCondensedExtraLightItalic
     },
-    roundedImage:{
+    roundedImage: {
         width: 38, aspectRatio: 1, borderRadius: 99,
         justifyContent: "center", alignItems: "center"
     },
-    borderImage:{
+    borderImage: {
         borderWidth: 1, borderColor: Colors.white,
     }
 

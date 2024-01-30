@@ -4,7 +4,7 @@ import ScreenWithLinearBackground from "../../components/ScreenWithLinearBackgro
 import {styles} from "./style";
 import Arrow from "../../assets/icons/svgs/thinArrow.svg"
 import AuthInput from "../../components/AuthInput";
-import WideModernButton from "../../components/WideModernButton";
+import WideModernButton from "../../components/AuthButton";
 import {FormProps} from "./LoginForm.tsx";
 import {useAppSelector} from "../../store";
 import {COLORS} from "../../utils/colors.ts";

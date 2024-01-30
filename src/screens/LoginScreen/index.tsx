@@ -51,8 +51,7 @@ const LoginScreen: React.FC = (props) => {
     //#endregion PageState Animation
 
     return (
-        <ScreenWithLinearBackground
-            colors={COLORS.GreenGradient}>
+        <ScreenWithLinearBackground>
             <ScrollView
                 style={{flex: 1}}
                 contentContainerStyle={{flexGrow: 1}}>

@@ -36,6 +36,7 @@ const KeyboardClosingWrapper: React.FC<KeyboardClosingWrapperProps> = (props) =>
             onPress={Keyboard.dismiss}
             accessible={false}
             disabled={!isKeyboardVisible}
+             style={{flex: 1}}
         >
             {props.children}
         </TouchableWithoutFeedback>

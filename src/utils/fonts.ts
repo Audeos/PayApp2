@@ -29,6 +29,9 @@ const fonts = {
     RobotoCondensedBoldItalic: {
         fontFamily: 'RobotoCondensed-BoldItalic',
     },
+    RobotoThin:{
+        fontFamily: 'RobotoCondensed-Thin',
+    }
 };
 
 type FontKeys = keyof typeof fonts;

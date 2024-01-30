@@ -2,7 +2,7 @@ import React from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator, NativeStackNavigationProp} from '@react-navigation/native-stack';
 import DashboardScreen from "./DashboardScreen";
-import GroupsScreen from "./GroupsScreen";
+import GroupsScreen from "./GroupRoute/GroupsScreen";
 import ProfileScreen from "./ProfileScreen";
 import LoginScreen from "./LoginScreen";
 import {AnimatedTabBarNavigator} from "react-native-animated-nav-tab-bar";
@@ -11,23 +11,24 @@ import DashboardIcon from "../assets/icons/tabbar/dashboard.svg";
 import GroupsIcon from "../assets/icons/tabbar/groups.svg";
 import FriendsIcon from "../assets/icons/tabbar/friends.svg";
 import ProfileIcon from "../assets/icons/tabbar/profile.svg";
-import FriendsScreen from "./FriendsScreen.tsx";
+import FriendsScreen from "./FriendsScreen";
 import {Fonts} from "../utils/fonts.ts";
+import GroupRoute from "./GroupRoute";
 
 type RootStackParamList = {
     LoginScreen: undefined;
     DashboardScreen: undefined;
-    GroupsScreen: undefined;
+    GroupsStack: undefined;
     ProfileScreen: undefined;
     TabNavigation: undefined;
 };
 
 export type LoginNavigationProp = NativeStackNavigationProp<RootStackParamList, "LoginScreen">
 export type DashboardNavigationProp = NativeStackNavigationProp<RootStackParamList, "DashboardScreen">
-export type GroupsNavigationProp = NativeStackNavigationProp<RootStackParamList, "GroupsScreen">
-export type ProfileNavigationProp = NativeStackNavigationProp<RootStackParamList, "ProfileScreen">
+export type ProfileScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "ProfileScreen">
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
+
 const Navigation: React.FC = (props) => {
 
     return (
@@ -52,9 +53,9 @@ const TabNavigation = () => (
                      options={{tabBarLabel: "Özet", tabBarIcon: ({focused = false}) => <DashboardIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
         <Tabs.Screen name={"FriendsScreen"} component={FriendsScreen}
                      options={{tabBarLabel: "Kişiler", tabBarIcon: ({focused = false}) => <FriendsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
-        <Tabs.Screen name={"GroupsScreen"} component={GroupsScreen}
+        <Tabs.Screen name={"GroupsStack"} component={GroupRoute}
                      options={{tabBarLabel: "Gruplar", tabBarIcon: ({focused = false}) => <GroupsIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
-        <Tabs.Screen name={"ProfileScreen"} component={ProfileScreen}
+        <Tabs.Screen name={"ProfileStack"} component={ProfileScreen}
                      options={{tabBarLabel: "Profil", tabBarIcon: ({focused = false}) => <ProfileIcon color={focused ? COLORS.DarkGreen2 : "white"}/>}}/>
     </Tabs.Navigator>
 )

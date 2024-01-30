@@ -13,7 +13,7 @@ const Screen: React.FC<ScreenProps> = (props) => {
 
     return (
         <KeyboardCloser>
-            <SafeAreaView style={{width: "100%", height: "100%", paddingTop: insets.top, ...props.styleProps}}>
+            <SafeAreaView style={{flex: 1, paddingTop: insets.top, ...props.styleProps}}>
                 {props.children}
             </SafeAreaView>
         </KeyboardCloser>

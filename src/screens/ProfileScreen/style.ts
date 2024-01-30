@@ -48,9 +48,4 @@ export const styles = StyleSheet.create({
         color:"#056604",
         ...Fonts.RobotoCondensedLight
     },
-
-
-
-
-
 })

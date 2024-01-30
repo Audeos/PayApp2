@@ -5,7 +5,8 @@ import {COLORS} from "../../utils/colors.ts";
 export const styles = StyleSheet.create({
     cardContainer: {
         width: "100%",
-        height: 86
+        height: 86,
+        marginTop:10,
     },
     cardContainerHeader: {
         width: "100%",
